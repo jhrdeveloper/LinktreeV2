@@ -12,8 +12,12 @@
     --firstColor: #000;
     /* Change the secondColor for your favorite color */
     --secondColor: #fff;
-    /* Only if you want change the basic color */
+
+    /*=== CHANGE IF YOU NEET IT ===*/
+    /* Only if you want change the general color */
     --bodyColor: #000;
+    /* Footer color */
+    --footerColor: #ccc;
 }
 
 body{
@@ -38,7 +42,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .logotype__img{
@@ -83,6 +87,7 @@ body{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    letter-spacing: .2rem;
 }
 
 .boxGeneral{
@@ -96,6 +101,14 @@ body{
 
 .boxGeneral a{
     text-decoration: none;
+}
+
+.general__reply{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxDark{
@@ -125,14 +138,242 @@ body{
     justify-content: center;
     align-items: center;
     border-top: 0.1rem solid var(--firstColor);
-    margin: 5% 8% 0 8%;
-    text-align: center; 
+    margin: 7% 8% 0 8%;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
-.container__footer .footer__copyright{
-    margin-top: 4%;
+.footer__copyright{
+    margin-top: 5%;
 }
 
-.heart{
+.container__footer .footer__copyright .heart{
+    display: inline-flex;
+    animation-name: beat;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
     color: var(--firstColor);
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(0.9);
+    }
+    5% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(0.9);
+    }
+    15% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.footer__icon{
+    margin-top: 1%;
+    font-size: 1.1rem;
+}
+
+.icon-hover{
+    text-decoration: none;
+    color: var(--footerColor);
+    transition: .5s;
+}
+
+.icon-hover:hover{
+    color: var(--firstColor);
+}
+
+/* ==================== MEDIA QUERY ==================== */
+/* ==================== MEDIA QUERY ==================== */
+/* ==================== MEDIA QUERY ==================== */
+
+/* == MEDIA 600 PX == */
+@media (min-width: 600px){
+
+    /* === LOGOTYPE === */
+    .container__logotype{
+        margin-top: 7%;
+    }
+
+    .logotype__img{
+        height: 180px;
+    }
+    .logotype__img img{
+        height: 180px;
+        width: 180px;
+    }
+
+    /* === FOOTER === */
+    .container__footer{
+        margin: 6% 17% 0 17%;
+        font-size: 1rem;
+    }
+}
+
+
+/* == MEDIA 768 PX == */
+@media (min-width: 768px){
+
+    /* === LOGOTYPE === */
+    .container__logotype{
+        margin-top: 5%;
+    }
+
+    .logotype__img{
+        height: 200px;
+    }
+    .logotype__img img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /* === TITLE === */
+    .container__title{
+        margin: 3% 0 3% 0;
+    }
+
+    /* === FOOTER === */
+    .container__footer{
+        margin: 6% 23% 0 23%;
+        font-size: 1.1rem;
+    }
+
+    .footer__icon{
+        font-size: 1.3rem;
+    }
+}
+
+
+/* == MEDIA 970 PX == */
+@media (min-width: 970px){
+
+    /* === LOGOTYPE === */
+    .container__logotype{
+        margin-top: 3%;
+    }
+
+    .logotype__img{
+        height: 225px;
+    }
+
+    .logotype__img img{
+        height: 225px;
+        width: 225px;
+    }
+
+    /* === TITLE === */
+    .container__title{
+        margin: 3% 0 3% 0;
+    }
+
+    /* === SOCIAL NETWORK === */
+    .boxDark{
+    transition: 0.6s;
+    }
+
+    .boxDark a{
+        transition: 0.5s;
+    }
+
+    .boxDark a:hover{
+        font-size: 1.1rem;
+    }
+
+    .boxWhite{
+        transition: 0.6s;
+    }
+
+    .boxWhite a{
+        transition: 0.5s;
+    }
+
+    .boxWhite:hover{
+        background-color: var(--firstColor);
+    }
+
+    .boxWhite a:hover{
+        color: var(--secondColor);
+        font-size: 1.1rem;
+    }
+
+    /* === FOOTER === */
+    .container__footer{
+        margin: 6% 30% 0 30%;
+        font-size: 1rem;
+    }
+
+    .footer__icon{
+        font-size: 1.4rem;
+    }
+}
+
+
+/* == MEDIA 1200 PX == */
+@media (min-width: 1200px){
+
+    .logotype__img{
+        height: 200px;
+    }
+
+    .logotype__img img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /* === TITLE === */
+    .container__title{
+        margin: 1.5% 0 1.5% 0;
+    }
+
+    /* === FOOTER === */
+    .container__footer{
+        margin: 3% 33% 0 33%;
+        font-size: 1rem;
+    }
+
+    .footer__icon{
+        font-size: 1.4rem;
+    }
+}
+
+/* == MEDIA 1600 PX == */
+@media (min-width: 1600px){
+
+    /* === LOGOTYPE === */
+    .container__logotype{
+        margin-top: 3%;
+    }
+
+    .logotype__img{
+        height: 200px;
+    }
+
+    .logotype__img img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /* === TITLE === */
+    .container__title{
+        margin: 1.5% 0 1.5% 0;
+        font-size: 1.3rem;
+    }
+
+    /* === FOOTER === */
+    .container__footer{
+        margin: 3% 38% 0 38%;
+        font-size: 1rem;
+    }
+
+    .footer__icon{
+        font-size: 1.4rem;
+    }
 }
