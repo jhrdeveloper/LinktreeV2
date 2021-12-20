@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --textPrincipal: 'Space Mono', monospace;
+    /* Change the firstColor for your favorite color */
+    --firstColor: #000;
+    /* Change the secondColor for your favorite color */
+    --secondColor: #fff;
+    /* Only if you want change the basic color */
+    --bodyColor: #000;
+}
+
+body{
+    font-family: var(--textPrincipal);
+    color: var(--bodyColor);
+}
+
+/* === PRINCIPAL CONTAINER === */
+.principalContainer{
+    display: grid;
+    grid-template-areas:
+    "." 
+    "logotype"
+    "title" 
+    "social"
+    "footer";
+}
+
+/* === LOGOTYPE === */
+.container__logotype{
+    grid-area: logotype;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.logotype__img{
+    height: 150px;
+}
+
+.logotype__img img{
+    height: 150px;
+    width: 150px;
+}
+
+/* If u want the image circle */
+
+/* .container__logotype img{
+    border-radius: 50%;
+} */
+
+/* === TITLE === */
+.container__title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 5% 0 5% 0;
+}
+
+.container__title .autotype{
+    font-weight: bold;
+    font-style: normal;
+    color: var(--firstColor);
+}
+
+/* === SOCIAL NETWORK === */
+.container__social{
+    grid-area: social;
+}
+
+.social__reusableBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.boxGeneral{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.boxGeneral a{
+    text-decoration: none;
+}
+
+.boxDark{
+    background-color: var(--firstColor);
+    color: var(--secondColor);
+}
+
+.boxDark a{
+    color: var(--secondColor);
+}
+
+.boxWhite{
+    background-color: var(--secondColor);
+    color: var(--firstColor);
+    border: 3px solid var(--firstColor);
+}
+
+.boxWhite a{
+    color: var(--firstColor);
+}
+
+/* === FOOTER === */
+.container__footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.1rem solid var(--firstColor);
+    margin: 5% 8% 0 8%;
+    text-align: center; 
+}
+
+.container__footer .footer__copyright{
+    margin-top: 4%;
+}
+
+.heart{
+    color: var(--firstColor);
+}
